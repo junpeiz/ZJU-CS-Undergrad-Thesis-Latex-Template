@@ -1,0 +1,84 @@
+\documentclass[twoside,numberorder]{csbachelor}
+
+%==============================================================
+%==============================================================
+
+\usepackage{url}
+\usepackage{subfigure}
+
+% 张海：其他引用
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdfpages}
+
+% 一些全局工具的定义
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\def\E{{\rm E}}
+\def\N{{\rm N}}
+\def\KL{{\rm KL}}
+
+\def\L{{\bf L}}
+\def\M{{\cal M}}
+
+\def\P{P_{\rm data}}
+
+\def\D{{\cal D}}
+\def\G{{\cal G}}
+
+\def\tY{\tilde{Y}}
+\def\tn{\tilde{n}}
+
+\def\hY{\hat{Y}}
+\def\hX{\hat{X}}
+
+%==============================================================
+%==============================================================
+
+% For CoopNets paper formula
+\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multicol,lipsum}
+\usepackage{float}
+
+% For header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LO]{\small 浙江大学本科生毕业论文}
+\fancyhead[RE]{\small 基于对比散度学习多尺度生成式卷积网络}
+\fancyfoot[C]{\small{\thepage}}
+
+\usetikzlibrary{matrix}
+
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+%\input{math_commands_CVPR.tex}
+
+\begin{document}
+
+\linespread{1.25}
+
+% Switch off page number display
+\pagenumbering{gobble}
+
+\tableofcontents
+\newpage
+
+% Display page again
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+\input{data/wenxianzongshu}
+
+\input{data/kaitibaogao}
+
+\input{data/waiwenfanyi}
+
+\chapter{四、外文原文}
+
+\includepdf[pages=-]{data/CoopNets.pdf}
+
+\end{document}

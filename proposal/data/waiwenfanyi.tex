@@ -1,0 +1,81 @@
+
+\chapter{三、外文翻译}
+
+{
+  \setlength{\parindent}{0em}
+
+  文献原文：
+
+  Xie, Jianwen, Yang Lu, Song-Chun Zhu, and Ying Nian Wu. "Cooperative training of descriptor and generator networks." AAAI. 2018. \par
+}
+
+\vspace{2em}
+
+{
+  \renewcommand{\cleardoublepage}{}
+  \renewcommand{\clearpage}{}
+  \titleformat{\chapter}[block]{\sanhao\songti\bfseries\filcenter}{}{0em}{}{}
+  \chapter*{通过MCMC训练进行的能量模型和隐变量模型的协作学习}
+}
+
+\section*{摘要}
+
+这篇论文研究了两种处理信号（比如图像信号）的概率模型的协同训练。两种网络模型都是由卷积神经网络来定义。第一个网络是一个判别式网络，它是一个指数分布簇模型（或者是一个基于能量的模型），它的特征统计（或者是能量函数）是由一个自下而上的卷积神经网络来定义的，这个卷积网络把观察到的信号映射到对应的特征。第二种网络是一个生成式的网络，它是因子分析的非线性版本，它由一个自上而下的卷积神经网络来定义，这个卷积网络把隐变量映射到可观察的信号。对于同时训练这个判别网络和生成网络，用到的最大似然训练算法都是以“轮流后向传播”的形式进行，而且这两种算法都涉及到Langevin采样。我们观察到这两种训练算法可以相互协作来加速Langevin采样的进行，而且它们可以很自然地被集成到一个CoopNets算法里，这个算法可以同时高效地训练这两个网络。
+
+\bigskip
+关键词：卷积神经网络、判别式模型、生成式模型、协同训练
+
+\section{简介}
+
+\subsection{两种相反方向的卷积神经网络}
+
+
+\newpage
+
+\section{参考文献}
+
+\begin{itemize}
+\item [{[}1{]}] Amari, Shun-ichi and Nagaoka, Hiroshi. Methods of information geometry, volume 191. American Mathematical Soc., 2007.
+\item [{[}2{]}] Blum, Avrim and Mitchell, Tom. Combining labeled and unlabeled data with co-training. In Proceedings of the eleventh annual conference on Computational learning theory, pp. 92–100. ACM, 1998.
+\item [{[}3{]}] Cover, Thomas M and Thomas, Joy A. Elements of information theory. John Wiley \& Sons, 2012.
+\item [{[}4{]}] Dai, Jifeng, Lu, Yang, and Wu, Ying Nian. Generative modeling of convolutional neural networks. In ICLR, 2015.
+\item [{[}5{]}] Dempster, Arthur P, Laird, Nan M, and Rubin, Donald B. Maximum likelihood from incomplete data via the em algorithm. Journal of the royal statistical society. Series B (methodological), pp. 1–38, 1977.
+\item [{[}6{]}] Deng, Jia, Dong, Wei, Socher, Richard, Li, Li-Jia, Li, Kai, and Fei-Fei, Li. Imagenet: A large-scale hierarchical image database. In Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on, pp. 248– 255. IEEE, 2009.
+\item [{[}7{]}] Dinh, Laurent, Sohl-Dickstein, Jascha, and Bengio, Samy. Density estimation using real nvp. arXiv preprint arXiv:1605.08803, 2016.
+\item [{[}8{]}] Dosovitskiy, E, Springenberg, J. T., and Brox, T. Learning to generate chairs with convolutional neural networks. In IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2015.
+\item [{[}9{]}] Girolami, Mark and Calderhead, Ben. Riemann manifold langevin and hamiltonian monte carlo methods. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 73(2):123–214, 2011.
+\item [{[}10{]}] Goodfellow, Ian, Pouget-Abadie, Jean, Mirza, Mehdi, Xu, Bing, Warde-Farley, David, Ozair, Sherjil, Courville, Aaron, and Bengio, Yoshua. Generative adversarial nets. In Advances in Neural Information Processing Systems, pp. 2672–2680, 2014.
+\item [{[}11{]}] Grenander, Ulf and Miller, Michael I. Pattern theory: from representation to inference. Oxford University Press, 2007.
+\item [{[}12{]}] Hinton, Geoffrey, Vinyals, Oriol, and Dean, Jeff. Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531, 2015.
+\item [{[}13{]}] Hinton, Geoffrey E. Training products of experts by minimizing contrastive divergence. Neural Computation, 14 (8):1771–1800, 2002.
+\item [{[}14{]}] Hopfield, John J. Neural networks and physical systems with emergent collective computational abilities. Proceedings of the national academy of sciences, 79(8): 2554–2558, 1982.
+\item [{[}15{]}] Hyvarinen, Aapo, Karhunen, Juha, and Oja, Erkki. ¨ Independent component analysis, volume 46. John Wiley \& Sons, 2004.
+\item [{[}16{]}] Ioffe, Sergey and Szegedy, Christian. Batch normalization: Accelerating deep network training by reducing internal covariate shift. arXiv preprint arXiv:1502.03167, 2015.
+\item [{[}17{]}] Kirkpatrick, Scott, Gelatt, C Daniel, Vecchi, Mario P, et al. Optimization by simmulated annealing. science, 220 (4598):671–680, 1983.
+\item [{[}18{]}] Krizhevsky, Alex, Sutskever, Ilya, and Hinton, Geoffrey E. Imagenet classification with deep convolutional neural networks. In NIPS, pp. 1097–1105, 2012.
+\item [{[}19{]}] LeCun, Yann, Bottou, Leon, Bengio, Yoshua, and Haffner, ´ Patrick. Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11):2278– 2324, 1998.
+\item [{[}20{]}] LeCun, Yann, Chopra, Sumit, Hadsell, Rata, Ranzato, Mare’Aurelio, and Huang, Fu Jie. A tutorial on energybased learning. In Predicting Structured Data. MIT Press, 2006.
+\item [{[}21{]}] Lee, Honglak, Grosse, Roger, Ranganath, Rajesh, and Ng, Andrew Y. Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations. In ICML, pp. 609–616. ACM, 2009.
+\item [{[}22{]}] Lu, Yang, Zhu, Song-Chun, and Wu, Ying Nian. Learning FRAME models using CNN filters. In Thirtieth AAAI Conference on Artificial Intelligence, 2016.
+\item [{[}23{]}] Marinari, Enzo and Parisi, Giorgio. Simulated tempering: a new monte carlo scheme. EPL (Europhysics Letters), 19(6):451, 1992.
+\item [{[}24{]}] Olshausen, Bruno A and Field, David J. Sparse coding with an overcomplete basis set: A strategy employed by v1? Vision Research, 37(23):3311–3325, 1997.
+\item [{[}25{]}] Pascanu, Razvan, Montufar, Guido, and Bengio, Yoshua. On the number of response regions of deep feed forward networks with piece-wise linear activations. arXiv preprint arXiv:1312.6098, 2013.
+\item [{[}26{]}] Robbins, Herbert and Monro, Sutton. A stochastic approximation method. The annals of mathematical statistics, pp. 400–407, 1951.
+\item [{[}27{]}] Roth, Stefan and Black, Michael J. Fields of experts: A framework for learning image priors. In CVPR, volume 2, pp. 860–867. IEEE, 2005.
+\item [{[}28{]}] Salakhutdinov, Ruslan and Hinton, Geoffrey E. Deep boltzmann machines. In AISTATS, 2009.
+\item [{[}29{]}] Teh, Yee Whye, Welling, Max, Osindero, Simon, and Hinton, Geoffrey E. Energy-based models for sparse overcomplete representations. Journal of Machine Learning Research, 4(Dec):1235–1260, 2003.
+\item [{[}30{]}] Tu, Zhuowen. Learning generative models via discriminative approaches. In 2007 IEEE Conference on Computer Vision and Pattern Recognition, pp. 1–8. IEEE, 2007.
+\item [{[}31{]}] Vedaldi, A. and Lenc, K. Matconvnet – convolutional neural networks for matlab. In Proceeding of the ACM Int. Conf. on Multimedia, 2015.
+\item [{[}32{]}] Welling, Max, Zemel, Richard S, and Hinton, Geoffrey E. Self supervised boosting. In Advances in neural information processing systems, pp. 665–672, 2002.
+\item [{[}33{]}] Wu, Ying Nian, Zhu, Song-Chun, and Guo, Cheng-En. From information scaling of natural images to regimes of statistical models. Quarterly of Applied Mathematics, 66:81–122, 2008.
+\item [{[}34{]}] Xie, Jianwen, Hu, Wenze, Zhu, Song-Chun, and Wu, Ying Nian. Learning sparse frame models for natural image patterns. International Journal of Computer Vision, pp. 1–22, 2014.
+\item [{[}35{]}] Xie, Jianwen, Lu, Yang, Zhu, Song-Chun, and Wu, Ying Nian. A theory of generative convnet. In ICML, 2016.
+\item [{[}36{]}] Younes, Laurent. On the convergence of markovian stochastic algorithms with rapidly decreasing ergodicity rates. Stochastics: An International Journal of Probability and Stochastic Processes, 65(3-4):177–228, 1999.
+\item [{[}37{]}] Zeiler, Matthew D and Fergus, Rob. Visualizing and understanding convolutional neural networks. In ECCV, 2014.
+\item [{[}38{]}] Zhou, Bolei, Lapedriza, Agata, Xiao, Jianxiong, Torralba, Antonio, and Oliva, Aude. Learning deep features for scene recognition using places database. In Advances in neural information processing systems, pp. 487–495, 2014.
+\item [{[}39{]}] Zhu, Song-Chun. Statistical modeling and conceptualization of visual patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence, 25(6):691–712, 2003.
+\item [{[}40{]}] Zhu, Song-Chun, Wu, Ying Nian, and Mumford, David. Minimax entropy principle and its application to texture modeling. Neural Computation, 9(8):1627–1660, 1997.
+\end{itemize}
+
+% 按文章长度需要启用
+%\ifthenelse{\equal{\zjuside}{T}}{\newpage\mbox{}\thispagestyle{empty}}{}
