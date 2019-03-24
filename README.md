@@ -9,7 +9,8 @@ By Junpei Zhou
 1. It is modified based on template provided by Hai Zhang
 2. Updated to the new style requirements in 2018 (but not sure if it can be used for 2019 and later)
 3. 主要还是用`thesis`的template，`proposal`里的貌似不是我用的最新版，连cite都是hardcode进去的。
-4. As it is accomplished a year ago, I cannot remember the exact details. If fail to run, please figure out it on your own. 
+4. 在Mac上可能会有`中易宋体`和`中易黑体`无法安装的问题，可以自行选择其他类似的宋体或者黑体（已经有学弟编译成功了，所以应该是reliable的）
+5. As it is accomplished a year ago, I cannot remember the exact details. If fail to run, please figure out it on your own. 
 
 Thanks.
 
